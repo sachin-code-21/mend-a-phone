@@ -1,0 +1,20 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <title>Service Request</title>    
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="{% static 'map/customer_request_form.css' %}" />
+    </head>
+    <body>
+        <div>
+            <h1>New Request</h1>
+        </div>
+        <div>
+            <form method="POST" class="post-form">{% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="save btn btn-default">Save</button>
+            </form>
+        </div>
+    </body>
+</html>

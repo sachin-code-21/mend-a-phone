@@ -1,0 +1,10 @@
+<h1>{{ customer.customer_text }}</h1>
+{% if customer_list %}
+    <ul>
+    {% for customer in customer_list %}
+        <li>>{{ customer.customer_text }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No requests are available.</p>
+{% endif %}
